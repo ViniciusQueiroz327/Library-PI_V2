@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definições de metadados -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para o arquivo CSS -->
+   <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- Título da página -->
+    <title>Starlight Library</title>
+    
+    <!-- Estilos embutidos -->
+    <style>
+        /* Importação da fonte Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+     /* Reset de estilos */
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Estilização da barra de navegação */
+        nav {
+            background-color: #18929D;
+            padding: 10px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Estilização do logotipo */
+        nav .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Estilização da imagem do logotipo */
+        nav .logo .logo-image {
+            margin-left: 10px; /* Espaço entre o texto e a imagem */
+            width: 60px; /* Ajuste o tamanho conforme necessário */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        
+        /* Estilização da lista de links de navegação */
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 10px;
+        }
+        
+        /* Estilização dos itens da lista de links de navegação */
+        nav li {
+            margin-left: 7px;
+        }
+        
+        /* Estilização dos links de navegação */
+        nav li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        /* Estilização dos links de navegação ao passar o mouse */
+        nav li a:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        /* Estilização do banner */
+        .banner {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.281), rgba(0,0,0,0.308)), url('https://free4kwallpapers.com/uploads/originals/2019/03/14/the-library-wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        /* Estilização do texto no banner */
+        .texto .titulo {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 600;
+            text-shadow: 5px 2px 16px rgba(181, 179, 58, 0.975); /* Sombra no contorno da letra */
+        }
+        
+        /* Estilização do subtítulo no banner */
+        .texto .sub_titulo {
+            color: #fff;
+            font-size: 58px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+
+        /* Fundo para o texto */
+        .background-text {
+            display: inline-block; /* Para que o fundo seja aplicado apenas ao conteúdo */
+            text-shadow: 10px 12px 16px rgba(255, 255, 255, 0.975); /* Sombra no contorno da letra */
+        }
+
+        /* Estilização dos botões no banner */
+        .texto .botoes {
+            margin-top: 30px;
+        }
+        
+        /* Estilização dos links nos botões */
+        .texto .botoes a {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+        
+        /* Estilização dos links de ação */
+        .texto .botoes a.n-overlay {
+            background: #fff;
+            color: #000;
+        }
+        
+        /* Estilização dos links de ação com overlay */
+        .texto .botoes a.overlay {
+            background: #000;
+            color: #fff;
+        }
+        
+        /* Efeito de levantamento suave ao passar o mouse */
+        .texto .botoes a:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Animação de vibrar */
+        @keyframes vibrar {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilização do h3 */
+        h1 {
+            color: white;
+            text-shadow: 65px 30px 84px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+
+        h2.a {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <!-- Logotipo -->
+        <div class="logo">
+            <a href="index.html">
+                Starlight Library
+                <img src="https://github.com/vivikamizono/StarlightLibrary/blob/main/image/sem_text.png?raw=true" alt="Logo" class="logo-image">
+            </a>
+        </div>
+
+        <!-- Lista de links de navegação -->
+        <ul>
+            <li><a href="{{ url_for('sobre_nos') }}">Sobre</a></li>
+            
+            <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção do banner -->
+    <section class="banner">
+        <div class="texto">
+            <!-- Título -->
+            <h1 class="titulo background-text">Bem vindos à Starlight Library</h1>
+            <!-- Subtítulo -->
+            <h2 class="sub_titulo background-text">Explorar o mundo dos livros com liberdade e autonomia</h2>
+            
+            <!-- Botões -->
+            <div class="botoes">
+                <!-- Botão "Procurar Livro" -->
+                <a href="search" class="n-overlay">Procurar Livro</a>
+                <!-- Botão "Cadastrar Livro" -->
+                <a href="create" class="overlay">Cadastrar Livro</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção dos funcionários -->
+    <section class="funcionarios">
+        <ul>
+            <!-- Iteração sobre a lista de funcionários -->
+            {% for funcionario in funcionarios %}
+            <li>
+                <!-- Informações do funcionário -->
+                {{ funcionario.nome_completo }} ({{ funcionario.rg }})
+                <!-- Links de ação -->
+                <a href="{{ url_for('update', id=funcionario.id) }}">Editar</a>
+                <a href="{{ url_for('delete', id=funcionario.id) }}">Excluir</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

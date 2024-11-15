@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StarLight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+
+  
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <!-- Slick Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  
+  <!-- Inicialização do carrossel -->
+  <script>
+    $(document).ready(function(){
+      $('.bookCarosel').slick({
+        slidesToShow: 6,       // Quantidade de livros visíveis
+        slidesToScroll: 1,     // Quantos livros são rolados por vez
+        infinite: true,        // Permite o looping infinito
+        dots: false,            // Adiciona os pontos de navegação
+        speed: 550,            // Velocidade da animação
+        // centerMode: true,
+        // centerPadding: '110px',
+        responsive: [
+          {
+            breakpoint: 1024,  // Tela menor que 1024px
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 600,   // Tela menor que 600px
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,   // Tela menor que 480px
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+</html>

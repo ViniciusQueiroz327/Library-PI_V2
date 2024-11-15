@@ -1,0 +1,20 @@
+
+Telas:
+	Login
+	Cadastro
+	Página Inicial
+	Registro de Livros
+	Informações de Livros
+	About
+	Pedidos
+
+
+
+Fluxo Pedido:
+	Login -> Pagina Inicial -> Seleção de Livro (Página de informações) -> SOlicitação de Doação (Ação do Usuário)	
+
+Fluxo Recebimento de Pedido:
+	Login -> Notificação -> Área de Pedidos/Solicitações -> Análise e Aprovação de Pedido -> Envio -> Confirmação de Recebimento
+
+Fluxo de Cadastro de livro:
+	Login -> Perfil -> Meus Livros -> Cadastrar Novo -> Confirmação de Cadastro

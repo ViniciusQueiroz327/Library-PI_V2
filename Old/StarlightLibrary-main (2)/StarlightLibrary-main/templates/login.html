@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+    <style>
+        /* Define a altura e a largura do corpo, além do papel de parede */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: url('https://free4kwallpapers.com/uploads/originals/2019/03/14/the-library-wallpaper.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Estilização do container principal */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilização da seção de login */
+        .section-login {
+            background: rgba(11, 11, 11, 0.836); /* Cor de fundo com transparência */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(255, 254, 254, 0.916);
+            width: 400px; /* Ajuste a largura conforme necessário */
+            max-width: 90%; /* Define uma largura máxima */
+            text-align: center; /* Centraliza o conteúdo horizontalmente */
+        }
+
+        /* Estilização do título */
+        .titulo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilização dos campos de formulário */
+        .campos {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilização do botão de entrar */
+        .botao {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 auto; /* Centraliza o botão */
+            display: block; /* Garante que o margin: 0 auto funcione */
+        }
+
+        /* Estilização do botão de entrar ao passar o mouse */
+        .botao:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilização do link de recuperação de senha */
+        #recuperar-senha {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007BFF;
+        }
+
+        /* Estilização do link de recuperação de senha ao passar o mouse */
+        #recuperar-senha:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilização do bloco de cadastro */
+        .cadastro {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilização do link de cadastro */
+        .cadastro a {
+            color: #007BFF;
+        }
+
+        /* Estilização do link de cadastro ao passar o mouse */
+        .cadastro a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilização da mensagem de erro */
+        .erro {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Estilização da imagem do logo */
+        .logo-image {
+            width: 150px; /* Ajuste o tamanho conforme necessário */
+          /*  height: auto;  Mantém a proporção da imagem */
+            display: block;
+            margin: 0 auto 0px; /* Centraliza a imagem e adiciona espaço abaixo dela */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="section-login">
+            <div class="titulo">
+                <img src="https://github.com/vivikamizono/StarlightLibrary/blob/main/image/comletrabranca.png?raw=true" alt="Logo" class="logo-image">
+                <h1>Login</h1>
+            </div>
+            <div class="formulario-login">
+                <form id="form-login" action="/login" method="POST">
+                    <input type="email" name="email" id="email" class="campos" placeholder="E-mail" required><br>
+                    <input type="password" name="senha" id="senha" class="campos" placeholder="Senha" required><br>
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <label for="lembrar">Manter conectado</label><br>
+                    <input type="submit" value="Entrar" class="botao">
+                </form>
+                <a href="" id="recuperar-senha"><b>Esqueci a senha</b></a>
+            </div>
+            <div class="cadastro">
+                <p>Não possui cadastro?</p><br>
+                <a href="/cadastro"><b>Cadastre-se</b></a>
+            </div>
+            {% if erro %}
+            <div class="erro">
+                <p>{{ erro }}</p>
+            </div>
+            {% endif %}
+        </section>
+    </div>
+</body>
+</html>

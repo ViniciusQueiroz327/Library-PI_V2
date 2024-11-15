@@ -1,0 +1,42 @@
+BRAINSTORM LIVRARIA
+
+- Estrutura do site
+    - Pagina Princial/Inicial
+    -
+
+
+- Livro
+    - Id_Livro [PK](varchar)
+    - Título (varchar)
+    - Data de Publicação (date)
+    - Preço (float)
+    - Gêneros (enum)
+    - ISBN (varchar)
+    - Número de Páginas (unsigned int)
+    - Tipo de mídia (enum)
+    - Cópias disponíveis (unsigned int)
+    - Sinópse (text)
+    - Id_Autor [FK](varchar)
+    - Id_Editora [FK](varchar)
+    - Id_Distribuidora [FK](varchar)
+
+
+- Avaliação
+    - Id_Avaliação [PK](varchar)
+    - data da avaliação (date)
+    - comentário (varchar)
+    - rating (float)
+    - Usuário [FK](varchar)
+
+
+- Autor
+    - Id_Autor [PK] (varchar)
+    - Nome (varchar)
+    - Biografia (text)
+    - 
+
+- Editora
+    -
+
+- Distribuidora
+    -

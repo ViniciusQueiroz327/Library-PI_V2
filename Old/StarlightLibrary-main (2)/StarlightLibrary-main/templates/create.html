@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Besley&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-rrp/MtQQeAWvGDmzTgklj9qX8B2ntL4IOqIMufpXw2FGObX1znl6e1x+PXTK7utb+DmRhLkDS5WdKzENFzyXaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url(images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            color: rgb(0, 0, 0);
+            font-family: 'Besley', serif;
+            margin: 0; /* Adicionado para remover a margem padrão do corpo */
+            padding: 0; /* Adicionado para remover o preenchimento padrão do corpo */
+        }
+
+      /* Estilização do contêiner flexível */
+      .flex-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85vh; /* Adicionado para ocupar 85% da altura da tela */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo preto transparente */
+            padding: 20px;
+            border-radius: 10px;
+            background: none; /* Fundo transparente */
+        }
+
+        .main-container {
+            width: 600px;
+            background: rgba(255, 255, 255, 0.8); /* Fundo branco transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .title {
+            text-align: center;
+        }
+        
+        .container {
+            margin-top: 20px;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="number"] {
+            width: 80%;
+            height: 30px;
+            border: 1px solid;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 5px;
+            padding-left: 1rem;
+            padding-right: 2rem;
+        }
+
+        .container input[type="submit"] {
+            width: 40%;
+            height: 40px;
+            background-color: #18929D;
+            color: white;
+            border: 2px solid #18929D;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #18929D;
+            color: white;
+        }
+
+        /* Estilo do banner */
+        .banner {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.281), rgba(0,0,0,0.308)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Estilo do link de voltar */
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #18929D;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilização do texto no banner */
+        .texto .titulo {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+        
+        /* Estilização do subtítulo no banner */
+        .texto .sub_titulo {
+            color: #fff;
+            font-size: 58px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+
+        /* Estilização dos botões no banner */
+        .texto .botoes {
+            margin-top: 30px;
+        }
+        
+        /* Estilização dos links nos botões */
+        .texto .botoes a {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+        
+        /* Estilização dos links de ação */
+        .texto .botoes a.n-overlay {
+            background: #fff;
+            color: #000;
+        }
+        
+        /* Estilização dos links de ação com overlay */
+        .texto .botoes a.overlay {
+            background: #000;
+            color: #fff;
+        }
+        
+        /* Efeito de levantamento suave ao passar o mouse */
+        .texto .botoes a:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Animação de vibrar */
+        @keyframes vibrar {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilização do h3 */
+        h3 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+
+        h3.a {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no contorno da letra */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Impede o envio do formulário imediatamente
+                alert("Cadastro realizado com sucesso");
+                form.submit(); // Envia o formulário após exibir o pop-up
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <div class="flex-box">
+            <div class="main-container">
+                <h1 class="title">Doar um Livro Novo</h1>
+                <div class="container">
+                    <form action="" method="post">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required><br><br>
+                        <label for="autor">Autor:</label>
+                        <input type="text" id="autor" name="autor" required><br><br>
+                        <label for="editora">Editora:</label>
+                        <input type="text" id="editora" name="editora" required><br><br>
+                        <input type="submit" value="Criar">
+                    </form>
+                </div>
+                <!-- Link para voltar -->
+                <div class="back-link">
+                    <a href="/"><i class="fas fa-arrow-left"></i> Voltar </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
