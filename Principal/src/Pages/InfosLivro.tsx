@@ -21,7 +21,7 @@ export function InfosLivro() {
                             <p>Português - por <a href="#">Collen Hoover</a> {"("}Autor{")"}, <a href="#">Priscila Catão</a> {"("}Tradutor{")"}</p>
                         </div>
                         <div id="disponibilidade">
-                            <h2>Disponível para doação!</h2>
+                            <h2>Disponível!</h2>
                             <button>Contatar doador</button>
                         </div>
                         <div id="frete">
