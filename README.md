@@ -31,9 +31,9 @@ Tecnologias Utilizadas 🖥️
 -  `Banco de dados`
 -  `Visual Studio Code`
 -  `Figma`
--  `HTML`
--  `CSS`
--  `JS`
+-  `React`
+-  `Styled-components`
+-  `TS`
 
 # Autores
 
