@@ -9,4 +9,9 @@ export const ButtonContainer = styled.button `
     font-size: large;
     box-shadow: 1px 1px 4px 0 #000000a4;
     border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #403f3f;
+        cursor: pointer;
 `

@@ -7,7 +7,7 @@ import {
 const BookCard: React.FC<UIBookCard> = ({ bookTitle, bookImage }) =>  {
     return (
         <BookCardContainer>
-            <img src={bookImage} alt="Book"/>
+            <img src={bookImage} alt="Book" draggable="false"/>
             {bookTitle && <h4>{bookTitle}</h4>}
         </BookCardContainer>
     )

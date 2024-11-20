@@ -1,9 +1,10 @@
 import { Home } from './Pages/Home/Home'
 import { About } from './Pages/About/About'
 import { BookRegister } from './Pages/BookRegister/BookRegister'
-import { BookSearch } from './Pages/BookSearch/BookSearch'
 import { InfoLivros } from './Pages/InfosLivro/InfosLivro'
 import { Profile } from './Pages/Profile/Profile'
+import { Login } from './Pages/Login/Login'
+import { Register } from './Pages/Register/Register'
 
 import {
   BrowserRouter as Router,
@@ -17,11 +18,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
-        {/* <Route path='/login' element={< />}/>
-        <Route path='/register' element={< />}/> */}
+        <Route path='/login' element={< Login/>}/>
+        <Route path='/register' element={< Register/>}/>
         <Route path="/about" element={<About />}/>
         <Route path="/bookregister" element={<BookRegister />}/>
-        <Route path="/booksearch" element={<BookSearch />}/>
         <Route path="/infolivros" element={<InfoLivros />}/>
         <Route path="/profile" element={<Profile />}/>
       </Routes>

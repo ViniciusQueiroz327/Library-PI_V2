@@ -1,6 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle `
+
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('/assets/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+             url('/assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('/assets/fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+             url('/assets/fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+
     :root {
         --background-gray: #333;
         --text-color-white: #FFF;
@@ -17,6 +34,7 @@ export const GlobalStyle = createGlobalStyle `
         padding: 0;
         box-sizing: border-box;
         color: var(--text-color-white);
+        font-family: 'Montserrat', sans-serif;
     }
 
     html, body {

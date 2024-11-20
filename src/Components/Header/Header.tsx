@@ -8,14 +8,15 @@ import { MainNav,
 const Header = () => {
     return (<>
         <MainNav>
-            <a href="/" id="home"><h1>STARLIGHT LIBRARY</h1></a>
+            <img id="logo"src="./assets/logo.png" alt="Logo Plenna" />
+            <a href="/" id="home"><h1>PLENNA</h1></a>
             <SearchBoxWrapper>
                 <SearchBox placeholder="Search"></SearchBox>
             </SearchBoxWrapper>
             <DivIcons>
-                <a href="/"><img className="iconsNavBar" src="./assets/icons/carrinho.svg" alt="Carrinho" /></a>
-                <a href="/"><img className="iconsNavBar" src="/assets/icons/notificacoes.svg" alt="Notificações" /></a>
-                <a href="/"><img className="iconsNavBar" src="/assets/icons/perfil.svg" alt="Perfil" /></a>
+                <a href="/"><img className="iconsNavBar" src="./assets/icons/carrinho.svg" alt="Carrinho" draggable="false"/></a>
+                <a href="/"><img className="iconsNavBar" src="/assets/icons/notificacoes.svg" alt="Notificações" draggable="false"/></a>
+                <a href="/"><img className="iconsNavBar" src="/assets/icons/perfil.svg" alt="Perfil" draggable="false"/></a>
             </DivIcons>
         </MainNav>
         <SecondaryNav>

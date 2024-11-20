@@ -11,9 +11,9 @@ const Home = () => {
     <Banner text="Encontre aqui os livros 
     que você procura sendo doados por pessoas 
     que não irão mais ler!!"/>
-    <BookSection sectionTitle="Section 1"></BookSection>
-    <BookSection sectionTitle="Section 2"></BookSection>
-    <BookSection sectionTitle="Section 3"></BookSection>
+    <BookSection sectionTitle="Mais procurados"></BookSection>
+    <BookSection sectionTitle="Recentemente adicionados"></BookSection>
+    <BookSection sectionTitle="Melhor avaliados"></BookSection>
     <NewsRegistry />
     <BlockquoteContainer>
         <blockquote>"Não há amigo tão leal quanto um livro" - <span>O Sol Também se Levanta</span></blockquote>

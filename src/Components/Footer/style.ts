@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.section `
-
-`
-
 export const ListContainer = styled.div `
     display: flex;
     flex-direction: row;
@@ -41,10 +37,11 @@ export const ContainerMaster = styled.div `
     padding: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     background-color: #e2e1d9;
     gap: 150px;
+    margin-bottom: 30px;
 
     label {
         font-weight: 700;
@@ -72,7 +69,4 @@ export const ContainerMaster = styled.div `
         font-size: 1.2rem;
         font-weight: 700;
     }
-`
-
-export const EndFooterContainer = styled.div `
 `

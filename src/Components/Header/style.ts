@@ -12,6 +12,15 @@ export const MainNav = styled.nav `
     padding: 0 24px;
     justify-content: space-between;
     z-index: 2;
+
+    #logo {
+        width: 100px;
+    }
+
+    #home {
+        position: absolute;
+        left: 6.5%;
+    }
 `
 
 export const SearchBoxWrapper = styled.div `
@@ -69,5 +78,4 @@ export const GenerosNav = styled.ul `
         font-weight: 700;
         background-color: #374151;
     }
-
 `
