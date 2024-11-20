@@ -35,7 +35,7 @@ export const SearchBox = styled.input`
     width: 400px;
     height: 40px;
     background-color: white;
-    border-radius: 12px;
+    border-radius: var(--border-radius2);
     border-style: none;
     padding: 0 2rem;
     font-size: large;
@@ -72,10 +72,24 @@ export const GenerosNav = styled.ul `
     width: 100vw;
     list-style: none;
     background-color: #374151;
+    height: 100%;
 
+    li, a {
+        height: 100%;
+    }
+    
     li > a {
+        display: grid;
+        place-items: center;
+        padding: 0 10px;
         color: white;
-        font-weight: 700;
+        font-weight: 600;
         background-color: #374151;
+        transition: .25s;
+    }
+
+    li:hover > a {
+        // opacity: .8;
+        color: #AAA;
     }
 `

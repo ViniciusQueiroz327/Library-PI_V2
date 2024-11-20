@@ -11,7 +11,7 @@ export const BookCardContainer = styled.div `
     height: 310px;
     margin-right: 20px;
     background-color: white;
-    border-radius: 7px;
+    border-radius: var(--border-radius1);
  
     h4 {
         text-align: center;

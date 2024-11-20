@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle `
 
     html, body {
         overflow-x: hidden;
+        scroll-behavior: smooth;
         background: var(--background-gray);
     }  
 
