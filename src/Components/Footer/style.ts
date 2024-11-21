@@ -7,6 +7,29 @@ export const ListContainer = styled.div `
     align-items: center;
     gap: 30px;
     list-decoration: none;
+
+    .title {
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .empty {
+        text-decoration: none;
+    } //PROVISÓRIO!!!!!!
+
+    ul {
+        width: 150px;
+    }
+
+    li {
+        color: black;
+        font-size: .9rem;
+        font-weight: 700;
+        text-decoration: underline;
+        list-style: none;
+    }
 `
 
 export const AuxiliarContainer = styled.div `
@@ -60,18 +83,4 @@ export const ContainerMaster = styled.div `
     h1, h2, h3, h4, label, ul > li{
         color: black;   
         }
-        
-    li {
-        list-style: none;
-    }
-
-    ul {
-        width: 150px;
-    }
-
-    .title {
-        padding-bottom: 1rem;
-        font-size: 1.2rem;
-        font-weight: 700;
-    }
 `

@@ -14,6 +14,8 @@ export const MainNav = styled.nav `
     z-index: 2;
 
     #logo {
+        position: relative;
+        top: .5vh;
         width: 100px;
     }
 

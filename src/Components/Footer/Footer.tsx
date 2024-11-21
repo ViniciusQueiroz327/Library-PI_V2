@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { BlockquoteContainer } from "../../Pages/Home/style"
 import { ListContainer, ContainerMaster, ContactsContainer, AuxiliarContainer} from "./style"
 
@@ -9,27 +10,27 @@ return (<>
             <ListContainer>
                 <ul>
                     <li className="title">Mapa do Site</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
+                    <Link to="/home"><li>Home</li></Link>
+                    <Link to="/login"><li>Login</li></Link>
+                    <Link to="/register"><li>Cadastro</li></Link>
+                    <Link to="/profile"><li>Perfil</li></Link>
+                    <Link to="/about"><li>Sobre nós</li></Link>
                 </ul>
                 <ul>
                     <li className="title">Sobre Nós</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
+                    <Link to="https://maps.app.goo.gl/Hp7grBic12S2weZDA" target="_blank"><li>Localização</li></Link>
+                    <li className="empty">----------------</li>
+                    <li className="empty">----------------</li>
+                    <li className="empty">----------------</li>
+                    <li className="empty">----------------</li>
                 </ul>
                 <ul>
                     <li className="title">Dúvidas</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
-                    <li>aaaaaaaaaaaaa</li>
+                    <Link to="https://wa.me/+5511972117799?text=Olá, tenho uma dúvida sobre a Plenna!" target="_blank"><li>WhatsApp</li></Link>
+                    <li className="empty">----------------</li>
+                    <li className="empty">----------------</li>
+                    <li className="empty">----------------</li>
+                    <li className="empty">----------------</li>
                 </ul>
             </ListContainer>
         </AuxiliarContainer>
