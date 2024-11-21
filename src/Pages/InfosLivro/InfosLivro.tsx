@@ -1,34 +1,38 @@
 import { Button } from "../../Components/Button/Button";
 import { Footer } from "../../Components/Footer/Footer";
 import { Header } from "../../Components/Header/Header";
-import { BookInfoContainer, SynopsisContainer } from "./style";
+import { BookInfoContainer, 
+         SynopsisContainer,
+         ImageContainer,
+         HeaderContainer,
+         AboutContainer,
+         SummarizedSynopsisContainer,
+         ButtonsContainer } from "./style";
 
-const InfoLivros = ( ) => {
+const InfosLivro = ( ) => {
     return (<>
     <Header />
+    {/* <p>Livros {">"} Destaques da semana {">"} Românticos {">"} É Assim que Acaba</p> */}
     <BookInfoContainer>
-        <div id="img">
-            <img src="livro.png" alt="Capa do Livro" />
-        </div>
-
-        <div id="header">
+        <ImageContainer>
+            <img src="./assets/livro.png" alt="Capa do Livro" />
+        </ImageContainer>
+        <HeaderContainer>
             <h1 id="title">É Assim Que Acaba</h1>
-            <div id="about">
+            <AboutContainer>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, iste omnis aliquam voluptatibus non perferendis architecto eaque laboriosam sed animi, incidunt reprehenderit eos suscipit fugit accusantium neque alias ad praesentium.</p>
-            </div>
-        </div>
-
-        <div id="synopsis">
+            </AboutContainer>
+        </HeaderContainer>
+        <SummarizedSynopsisContainer>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio esse, dignissimos eos exercitationem sed dolore ab, delectus, nesciunt consequatur natus totam voluptate quas quis sequi aliquam commodi non nostrum.
             Veniam eius doloremque suscipit reiciendis iusto voluptate possimus esse perspiciatis culpa incidunt aperiam vero tenetur placeat dicta necessitatibus illo, error debitis aspernatur repudiandae quod temporibus neque! Ullam nemo esse vero.
             Qui officiis, ratione distinctio reprehenderit laboriosam quam, placeat at natus dolore sed obcaecati provident aspernatur repellat? Laborum, nesciunt est ullam animi quisquam quasi sed deleniti minus fugit suscipit architecto ut.
             </p>
-        </div>
-
-        <div id="btns">
-            <Button title="LER SINÓPSE COMPLETA" />
-            <Button title="EU QUERO!"/>
-        </div>
+        </SummarizedSynopsisContainer>
+        <ButtonsContainer>
+            <Button title="LER SINÓPSE COMPLETA" type="button"/>
+            <Button title="EU QUERO!" type="button"/>
+        </ButtonsContainer>
     </BookInfoContainer>
     <SynopsisContainer>
         <p>
@@ -50,4 +54,4 @@ const InfoLivros = ( ) => {
     </>)
 }
 
-export { InfoLivros }
+export { InfosLivro }

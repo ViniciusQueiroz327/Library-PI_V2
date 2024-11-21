@@ -5,7 +5,7 @@ const Footer = () => {
 return (<>
     <ContainerMaster>
         <AuxiliarContainer>
-            <h2>STARLIGHT LIBRARY</h2>
+            <h2>PLENNA</h2>
             <ListContainer>
                 <ul>
                     <li className="title">Mapa do Site</li>
@@ -46,7 +46,7 @@ return (<>
         </ContactsContainer>
     </ContainerMaster>
         <BlockquoteContainer>
-            <blockquote>All Rights Reserved <span>@StarLight</span></blockquote>
+            <blockquote>All Rights Reserved <span>@Plenna</span></blockquote>
         </BlockquoteContainer>
 </>)
 }

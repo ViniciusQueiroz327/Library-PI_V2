@@ -11,6 +11,11 @@ export const ListContainer = styled.div `
 
 export const AuxiliarContainer = styled.div `
     margin: 20px;
+
+    h2 {
+        position: relative;
+        left: 7.5vw;
+    }
 `
 
 export const ContactsContainer = styled.div`

@@ -1,7 +1,7 @@
 import { Home } from './Pages/Home/Home'
 import { About } from './Pages/About/About'
 import { BookRegister } from './Pages/BookRegister/BookRegister'
-import { InfoLivros } from './Pages/InfosLivro/InfosLivro'
+import { InfosLivro } from './Pages/InfosLivro/InfosLivro'
 import { Profile } from './Pages/Profile/Profile'
 import { Login } from './Pages/Login/Login'
 import { Register } from './Pages/Register/Register'
@@ -22,7 +22,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path="/about" element={<About />}/>
         <Route path="/bookregister" element={<BookRegister />}/>
-        <Route path="/infolivros" element={<InfoLivros />}/>
+        <Route path="/infoslivro" element={<InfosLivro />}/>
         <Route path="/profile" element={<Profile />}/>
       </Routes>
     </Router>
