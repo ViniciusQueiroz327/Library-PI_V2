@@ -46,4 +46,8 @@ export const GlobalStyle = createGlobalStyle `
     a {
         text-decoration: none;
     }
+
+    label {
+        display: none;
+    }
 `

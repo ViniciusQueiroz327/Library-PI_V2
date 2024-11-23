@@ -12,9 +12,9 @@ const BookRegister = () => {
                 <FormLoginContainer>
                     <h1>Cadastro de Livros</h1>
                     <form action="">
-                    <Input placeholder="Nome do livro" type="text"/>
-                        <Input placeholder="Autor" type="text"/>
-                        <Input placeholder="Editora" type="text"/>
+                    <Input placeholder="Nome do livro" type="text" name="nome do livro"/>
+                        <Input placeholder="Autor" type="text" name="autor"/>
+                        <Input placeholder="Editora" type="text" name="editora"/>
                     </form>
                     <Button title="DOAR" type="button" path="#"></Button>
                 </FormLoginContainer>
