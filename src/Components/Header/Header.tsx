@@ -4,15 +4,18 @@ import { MainNav,
          SearchBox, 
          DivIcons,
          SecondaryNav,
-         GenerosNav } from "./style"
+         GenerosNav,
+         HomeWrapper } from "./style"
 
 const Header = () => {
     return (<>
         <MainNav>
-            <Link to="/" draggable="false">
-                <img id="logo"src="./assets/logo.png" alt="Logo Plenna" draggable="false"/>
-            </Link>
-            <a href="/" id="home" draggable="false"><h1>PLENNA</h1></a>
+            <HomeWrapper>
+                <Link to="/" draggable="false">
+                    <img id="logo"src="./assets/logo.png" alt="Logo Plenna" draggable="false"/>
+                </Link>
+                <a href="/" draggable="false"><h1>PLENNA</h1></a>
+            </HomeWrapper>
             <SearchBoxWrapper>
                 <SearchBox placeholder="Search"></SearchBox>
             </SearchBoxWrapper>

@@ -8,27 +8,28 @@ export const MainNav = styled.nav `
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 0 24px;
     justify-content: space-between;
     z-index: 2;
 
+
+`
+
+export const HomeWrapper = styled.div `
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     #logo {
-        position: relative;
-        top: .5vh;
+        margin-top: 10px;
         width: 100px;
     }
 
-    #home {
-        position: absolute;
-        left: 6.5%;
-    }
 `
 
 export const SearchBoxWrapper = styled.div `
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
     display: inline-block;
     cursor: pointer;
 `
