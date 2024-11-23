@@ -4,7 +4,7 @@ export const AboutUsContainer = styled.div `
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
     gap: 30px;
 
     h1 {
@@ -14,6 +14,6 @@ export const AboutUsContainer = styled.div `
     blockquote {
         line-height: 3;
         text-align: center;
-        margin: auto;
+        margin-bottom: 50px;   
     }
 `

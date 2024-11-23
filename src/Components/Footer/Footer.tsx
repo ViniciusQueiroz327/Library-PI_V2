@@ -36,7 +36,7 @@ return (<>
         </AuxiliarContainer>
         <ContactsContainer>
             <h1>Contato</h1>
-            <h3>starlight@books.com</h3>
+            <h3>plenna@books.com</h3>
             <h4>(11) 0800 123 4567</h4>
             <div>
                 <a href="#"><img className="icons" src="/assets/icons/instagram.svg" alt="" draggable="false"/></a>
