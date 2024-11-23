@@ -8,7 +8,7 @@ const NewsRegistry = () => {
             <h1>Receba Novidades</h1>
             <Input placeholder="Nome" type="text"></Input>
             <Input placeholder="E-mail" type="email"></Input>
-            <Button type="submit" title="Enviar"></Button>
+            <Button type="submit" title="Enviar" onClick={() => alert("REGISTRADO!")}></Button>
         </NewsRegistryContainer>
     )
 }

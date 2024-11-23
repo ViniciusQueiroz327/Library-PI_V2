@@ -14,7 +14,7 @@ const Register = () => {
                         <Input placeholder="E-mail" type="email"/>
                         <Input placeholder="Senha" type="password"/>
                     </form>
-                    <Button title="Finalizar" type="button"></Button>
+                    <Button title="Finalizar" type="button" path="/login" onClick={() => alert("CADASTRADO!")}></Button>
                         <a href="/login">Já possui uma conta?</a>
                 </FormLoginContainer>
             </LoginContainer>

@@ -16,7 +16,7 @@ const BookRegister = () => {
                         <Input placeholder="Autor" type="text"/>
                         <Input placeholder="Editora" type="text"/>
                     </form>
-                    <Button title="DOAR" type="button"></Button>
+                    <Button title="DOAR" type="button" path="#"></Button>
                 </FormLoginContainer>
             </LoginContainer>
         </MasterContainer>

@@ -13,7 +13,7 @@ const Login = () => {
                         <Input placeholder="E-mail" type="email"/>
                         <Input placeholder="Senha" type="password"/>
                     </form>
-                    <Button title="Login" type="button"></Button>
+                    <Button title="Login" type="button" path="/"></Button>
                     <LinksContainer>
                         <a href="/register">Cadastre-se</a>
                         <a href="#">Esqueceu a senha?</a>
