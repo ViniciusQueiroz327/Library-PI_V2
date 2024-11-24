@@ -1,31 +1,35 @@
 import styled from 'styled-components';
 
 export const BookCardContainer = styled.div `
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 0;
-    padding: 20px;
-    /* width: 215px; */
-    height: 310px;
-    margin-right: 20px;
-    background-color: white;
+    flex: 0 0 auto;
+    width: calc((100% - 15px * var(--qtd) + 15px) / var(--qtd));
+    height: 320px;
     border-radius: var(--border-radius1);
- 
-    h4 {
-        text-align: center;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        max-width: 100%;
-        margin: 0 auto;
-        line-height: 1.4;
-        padding: .2rem 0;
-        color: black;
+    background: white;
+    color: black;
+    
+    &:not(:last-child) {
+        margin-right: 15px;
+        }
+        
+    img {
+        height: 70%;
+        // width: 100%;
+        border-radius: var(--border-radius1);
     }
 
-    img {
-        height: 200px;
-        width: 100%;
+    h4 {
+        height: 100%;
+        color: black;
+        padding: 10px;
+    }
+            
+    a {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
     }
 `
