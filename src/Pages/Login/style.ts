@@ -15,7 +15,7 @@ export const FormContainer = styled.div `
     background: #FFFFFF55;
     width: 50vw;
     min-width: 500px;
-    height: 600px;
+    height: 480px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;

@@ -13,7 +13,7 @@ return (<>
                     <Link to="/home"><li>Home</li></Link>
                     <Link to="/login"><li>Login</li></Link>
                     <Link to="/register"><li>Cadastro</li></Link>
-                    <Link to="/profile"><li>Perfil</li></Link>
+                    <Link to="/bookRegister"><li>Cadastro de Livros</li></Link>
                     <Link to="/about"><li>Sobre nós</li></Link>
                 </ul>
                 <ul>

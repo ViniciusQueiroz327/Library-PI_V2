@@ -1,4 +1,5 @@
-import { MasterContainer, LoginContainer, FormLoginContainer } from "./style"
+import { MasterContainer } from "./style"
+import { FormContainer } from "../Login/style"
 import { Input } from "../../Components/Input/Input"
 import { Button } from "../../Components/Button/Button"
 import { Header } from "../../Components/Header/Header"
@@ -7,18 +8,18 @@ const BookRegister = () => {
     return (<>
         <Header />
         <MasterContainer>
-            <img src="/assets/logo.png" alt="Starlight" id="logo" draggable="false"/>
-            <LoginContainer>
-                <FormLoginContainer>
-                    <h1>Cadastro de Livros</h1>
-                    <form action="">
+            <FormContainer>
+                <h1>Cadastro de Livro</h1>
+                <form action="">
+                    <label htmlFor="nome do livro">Nome do livro</label>
                     <Input placeholder="Nome do livro" type="text" name="nome do livro"/>
-                        <Input placeholder="Autor" type="text" name="autor"/>
-                        <Input placeholder="Editora" type="text" name="editora"/>
-                    </form>
-                    <Button title="DOAR" type="button" path="#"></Button>
-                </FormLoginContainer>
-            </LoginContainer>
+                    <label htmlFor="autor">Autor</label>
+                    <Input placeholder="Autor" type="text" name="autor"/>
+                    <label htmlFor="editora">Editora</label>
+                    <Input placeholder="Editora" type="text" name="editora"/>
+                </form>
+                <Button title="DOAR" type="submit" path="/" onClick={() => alert("LIVRO CADASTRADO!")}></Button>
+            </FormContainer>
         </MasterContainer>
     </>)
 }

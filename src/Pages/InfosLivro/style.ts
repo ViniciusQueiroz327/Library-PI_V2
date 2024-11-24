@@ -51,6 +51,10 @@ export const AboutContainer = styled.div `
         white-space: nowrap;
     }
 
+    a {
+        text-decoration: underline;
+    }
+
     ::after {
         position: absolute;
         top: 0;
@@ -67,6 +71,10 @@ export const SummarizedSynopsisContainer = styled.div `
     align-self: start;
     padding: 0 30px;
     grid-column: 2 / 4;
+
+    p {
+        line-height: 1.5;
+    }
 `
 export const ButtonsContainer = styled.div `
     grid-column: 2 / 4;
@@ -91,10 +99,12 @@ export const SynopsisContainer = styled.section`
 
     p {
       color: black;
+      line-height: 2;
+      font-weight: 700;
     }
 
     &::before {
-      content: "Sinópse";
+      content: "Sinopse";
       background: #333;
       padding: 10px 80px;
       font-weight: 500;
