@@ -5,7 +5,7 @@ export const BookInfoContainer = styled.div `
     padding: 10px;
     margin-top: 150px;
     background-color: #747474;
-    height: 450px;
+    height: 500px;
     width: calc(100% - 100px);
     border-radius: 24px;
 
@@ -32,7 +32,7 @@ export const ImageContainer = styled.div `
 
     img {
         width: 240px;
-        height: 389px;
+        height: 440px;
     } //MUDAR DEPOIS!!!!!!!!!!!!
 `
 
@@ -89,7 +89,7 @@ export const ButtonsContainer = styled.div `
 
 export const SynopsisContainer = styled.section`
     width: 100%;
-    height: 400px;
+    min-height: 500px;
     margin: 70px 0;
     padding: 50px;
     background: white;

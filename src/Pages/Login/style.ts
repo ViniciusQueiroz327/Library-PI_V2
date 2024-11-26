@@ -12,10 +12,11 @@ export const MasterContainer = styled.div`
 `
 
 export const FormContainer = styled.div `
-    background: #FFFFFF55;
+    background: #ffffff94;
     width: 50vw;
     min-width: 500px;
-    height: 480px;
+    min-height: 420px;
+    max-height: 420px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -42,7 +43,8 @@ export const FormContainer = styled.div `
     }
 
     h1 {
-        color: #183444;
+        color: #0d2b3d;
+        margin-top: 20px;
     }
 
     Input {
@@ -51,7 +53,7 @@ export const FormContainer = styled.div `
         font-weight: 400;
 
         &::placeholder {
-            color: #183444;
+            color: #0d2b3d;
             font-weight: 700;
         }
     }

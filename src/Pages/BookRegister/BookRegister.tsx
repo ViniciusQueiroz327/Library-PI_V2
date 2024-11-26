@@ -1,5 +1,5 @@
 import { MasterContainer } from "./style"
-import { FormContainer } from "../Login/style"
+import { FormContainer } from "./style"
 import { Input } from "../../Components/Input/Input"
 import { Button } from "../../Components/Button/Button"
 import { Header } from "../../Components/Header/Header"
@@ -8,7 +8,7 @@ const BookRegister = () => {
     return (<>
         <Header />
         <MasterContainer>
-            <FormContainer>
+            <FormContainer className="FormContainer">
                 <h1>Cadastro de Livro</h1>
                 <form action="">
                     <label htmlFor="nome do livro">Nome do livro</label>
