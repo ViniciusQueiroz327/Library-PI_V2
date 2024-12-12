@@ -1,13 +1,9 @@
 import { BookCard } from "../BookCard/BookCard";
+import { UIBookCard } from "../BookCard/types";
 import { BookSectionContainer, BookCarosel, CaroselContainer, NavigationButtons } from './style';
 import { UIBookSection } from './types';
 import React, { useState, useEffect, useRef } from "react";
 
-// Defina o tipo do livro
-interface Book {
-  title: string;
-  image: string;
-}
 
 const BookSection: React.FC<UIBookSection> = ({ sectionTitle }) => {
   const [position, setPosition] = useState(0);
@@ -17,10 +13,12 @@ const BookSection: React.FC<UIBookSection> = ({ sectionTitle }) => {
   const [slideClass, setSlideClass] = useState("");
   const slideRef = useRef<HTMLDivElement | null>(null);
 
-  // Tipando o estado `data` com um array de livros
-  const [data, setData] = useState<Book[]>([]);
+  const [data, setData] = useState<UIBookCard[]>([]);
 
   useEffect(() => {
+    document.documentElement.style.setProperty("--qtd", qtd.toString());
+    document.documentElement.style.setProperty("--margin", `${marginCards}px`);
+
     const url = "https://raw.githubusercontent.com/ViniciusQueiroz327/Plenna/main/books.json";
 
     const fetchData = async () => {
@@ -38,45 +36,30 @@ const BookSection: React.FC<UIBookSection> = ({ sectionTitle }) => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    document.documentElement.style.setProperty("--qtd", qtd.toString());
-    document.documentElement.style.setProperty("--margin", `${marginCards}px`);
-  }, [qtd, marginCards]);
 
-  const moveLeft = () => {
-    if (!slideClass) setSlideClass("animating-right");
-  };
+  const handleMove = (direction: string) => setSlideClass(`animating-${direction}`);
 
-  const moveRight = () => {
-    if (!slideClass) setSlideClass("animating-left");
-  };
 
   useEffect(() => {
-    const handleAnimationEnd = () => {
+    const timer = setTimeout(() => {
       if (slideClass === "animating-left")
-        setPosition((prev) => (prev + qtd) % data.length);
-      else if (slideClass === "animating-right")
         setPosition((prev) => (prev - qtd + data.length) % data.length);
-
+      else if (slideClass === "animating-right")
+        setPosition((prev) => (prev + qtd) % data.length);
+      
       setSlideClass("");
-    };
+    }, 1150);
+  
+    return () => { clearTimeout(timer) };
+  }, [slideClass]);
 
-    const slideElement = slideRef.current;
-    if (slideElement)
-      slideElement.addEventListener("animationend", handleAnimationEnd);
-
-    return () => {
-      if (slideElement)
-        slideElement.removeEventListener("animationend", handleAnimationEnd);
-    };
-  }, [slideClass, data.length, qtd]);
 
   return (
     <BookSectionContainer>
       <h1>{sectionTitle}</h1>
 
       <CaroselContainer>
-        <NavigationButtons className="left-btn" onClick={moveLeft}>
+        <NavigationButtons className="left-btn" onClick={() => handleMove("left")}>
           <b>{"<"}</b>
         </NavigationButtons>
         <BookCarosel className={`bookCarosel ${slideClass}`} ref={slideRef}>
@@ -89,7 +72,7 @@ const BookSection: React.FC<UIBookSection> = ({ sectionTitle }) => {
               />
             ))}
         </BookCarosel>
-        <NavigationButtons className="right-btn" onClick={moveRight}>
+        <NavigationButtons className="right-btn" onClick={() => handleMove("right")}>
           <b>{">"}</b>
         </NavigationButtons>
       </CaroselContainer>
